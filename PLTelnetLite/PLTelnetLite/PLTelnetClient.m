@@ -268,7 +268,7 @@ static const NSInteger          PLTelnetLite_Retry_Count    = 3;
 
 - (BOOL)connectToHost:(NSString *)host onPort:(NSUInteger)port
 {
-    return [_socket connectToHost:host onPort:port error:nil];
+    return [_socket connectToHost:host onPort:port withTimeout:_timeout error:nil];
 }
 
 - (void)disconnect
